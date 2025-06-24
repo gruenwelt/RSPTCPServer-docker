@@ -35,7 +35,7 @@ A Dockerfile that builds and installs the required SDRPlay API for RSPTCPServer 
 3. Build the Docker image:
 
 ```bash
-docker build -t rsp_tcp_server .
+docker build -t RSPTCPServer .
 ```
 
 ---
