@@ -1,0 +1,13 @@
+services:
+  rsptcpserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: RSPTCPServer_container
+    restart: unless-stopped
+    ports:
+      - "2222:2222"
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
+    entrypoint: ["/usr/local/bin/start-rsp_tcp.sh"]
+    command: ["rsp_tcp", "-a", "0.0.0.0", "-p", "2222"]
